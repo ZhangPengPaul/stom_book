@@ -1,16 +1,15 @@
-Storm
-test
-are
-great
-is
-an
-Storm
-simple
-application
-but
-very
-powerful
-really
-Storm
-is
-great
+2595 [Thread-11-EventThread] INFO  com.netflix.curator.framework.state.ConnectionStateManager  - State change: SUSPENDED
+2596 [Thread-11-EventThread] WARN  backtype.storm.cluster  - Received event :disconnected::none: with disconnected Zookeeper.
+2596 [ConnectionStateManager-0] WARN  com.netflix.curator.framework.state.ConnectionStateManager  - There are no ConnectionStateListeners registered.
+3592 [Thread-11-SendThread(localhost:2000)] WARN  org.apache.zookeeper.ClientCnxn  - Session 0x1417e6596c7000b for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+    at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+    at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599)
+    at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1119)
+3895 [Thread-11-SendThread(localhost:2000)] WARN  org.apache.zookeeper.ClientCnxn  - Session 0x1417e6596c7000b for server null, unexpected error, closing socket connection and attempting reconnect
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss
+    at org.apache.zookeeper.KeeperException.create(KeeperException.java:90)
+    at com.netflix.curator.framework.imps.CuratorFrameworkImpl.processBackgroundOperation(CuratorFrameworkImpl.java:380)
+    at com.netflix.curator.framework.imps.BackgroundSyncImpl$1.processResult(BackgroundSyncImpl.java:49)
+    at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:617)
+    at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:506)
